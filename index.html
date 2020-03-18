@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 - Scatterplot Matrix</title>
+    <style>
+      svg {
+        background: white;
+      }
+      div {
+        text-align: center;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      circle.deselected {
+        fill: black;
+        r: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div name='headings'>
+      <h1> Scatterplot Matrix </h1>
+      <p> Jiawei Wang jwang96@uab.edu </p>
+    </div>
+    <div id='svg_chart'></div>
+    <div name='hint'>
+      <p>For maximum efficiency, please consider reusing this code, implement the following function in code.js:</p>
+
+      <table align='center' width=60% cellpadding="10">
+        <tr>
+          <th>Function to be Impl.</th>
+          <th> Explaination</th>
+        </tr>
+        <tr>
+          <td><var>data_location</var></td>
+          <td align='left'>Located the first line of the row; make sure the data is placed in the correct location.</td>
+        </tr>
+        <tr>
+          <td><code>draw_scatterpoints()</code></td>
+          <td align='left'>Finish drawing the scatterpot by adding axis and legends, and append data points based on the loaded data <var>iris_data</var>.
+        </tr>
+        <tr>
+          <td><code>assign_brush_events()</code></td>
+          <td align='left'>Highlight the data based on dragging using D3 brush feature. You should implement the missing 3 sub-functions:
+          <ul>
+            <li><code>brushstarted()</code>: clear any previous selection before brush begins.</li>
+            <li><code>brushed()</code>: make points outside the selection looks "deselected". You can set the class of those points to <code>deselected</code>, as predefined in this css.</li>
+            <li><code>brushend()</code>: check if there are no selection, highlight all circles.
+          </ul></td>
+        </tr>
+      </table>
+      <p>Once all functions are correctly implemented, you will get the ready-to-submit result shown above.</p>
+    </div>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="code.js"></script>
+  </body>
+</html>
